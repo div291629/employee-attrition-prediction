@@ -1,2 +1,92 @@
-# employee-attrition-prediction
-Performed exploratory analysis and feature preprocessing on the IBM HR dataset, built Logistic Regression and Random Forest models for employee attrition prediction, evaluated performance using ROC-AUC and confusion matrices, and identified key drivers of attrition to support HR decision-making.
+# HR Attrition Analysis and Prediction
+
+## Problem Statement
+Employee attrition leads to increased hiring costs, productivity loss, and disruption in workforce stability.  
+HR teams need a data-driven way to identify employees who are most likely to leave and to understand the underlying reasons behind attrition.
+
+This project analyzes historical HR data to answer two key questions:
+- Who is most likely to leave the organization?
+- Why are they leaving?
+
+---
+
+## Dataset
+IBM HR Analytics Employee Attrition & Performance dataset (Kaggle)  
+- 1,470 employee records  
+- ~40 HR-related attributes including age, department, income, job satisfaction, overtime, and years at company  
+
+The dataset is largely pre-structured; the focus of this project is on analysis, preprocessing, modeling, and interpretation.
+
+---
+
+## Project Approach
+
+### 1. Data Preprocessing
+- Removed non-informative identifiers (e.g., Employee ID)
+- Handled missing values using:
+  - Median imputation for numerical variables
+  - Mode imputation for categorical variables
+- Encoded categorical features using one-hot encoding
+- Standardized numerical features using StandardScaler to ensure comparable feature scales
+
+### 2. Exploratory Data Analysis (EDA)
+- Analyzed attrition distribution and key demographic patterns
+- Studied relationships between attrition and variables such as:
+  - Overtime
+  - Job satisfaction
+  - Monthly income
+  - Work-life balance
+  - Years at company and job role
+- Used correlation analysis and visualizations to identify influential factors
+
+### 3. Predictive Modeling
+Two machine learning models were built and compared:
+- **Logistic Regression** as an interpretable baseline model
+- **Random Forest Classifier** to capture non-linear relationships and improve predictive performance
+
+Models were evaluated using:
+- Stratified train–test split
+- Confusion matrix
+- ROC-AUC score
+
+### 4. Model Interpretation
+- Logistic Regression coefficients and odds ratios were analyzed to understand the direction and strength of feature impact
+- Random Forest feature importance was used to identify the most influential variables
+- Employees were ranked by predicted attrition probability to highlight high-risk cases
+
+---
+
+## Power BI Dashboards
+Interactive Power BI dashboards were created to support business interpretation and storytelling.  
+The dashboards provide insights on:
+
+- Overall attrition rate and employee distribution
+- Attrition by department, job role, age group, and tenure
+- Impact of overtime, income bands, and work-life balance
+- Comparison between employees who left and those who stayed
+
+These dashboards allow HR stakeholders to explore trends without interacting directly with the code.
+
+---
+
+## Key Insights
+- Employees working overtime show significantly higher attrition rates
+- Lower job satisfaction and lower income levels are strongly associated with attrition
+- Attrition varies across departments, job roles, and tenure groups
+- Random Forest achieved better predictive performance, while Logistic Regression offered clearer interpretability
+
+---
+
+## Tech Stack
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Power BI
+- Matplotlib
+- Jupyter Notebook
+
+---
+
+## Notes
+This project is an analytical case study focused on understanding and predicting employee attrition using historical data.  
+It is not intended as a deployed production system.
