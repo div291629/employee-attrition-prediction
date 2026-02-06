@@ -1,12 +1,16 @@
 # HR Attrition Analysis and Prediction
 
 ## Problem Statement
-Employee attrition leads to increased hiring costs, productivity loss, and disruption in workforce stability.  
-HR teams need a data-driven way to identify employees who are most likely to leave and to understand the underlying reasons behind attrition.
+Employee attrition creates direct hiring costs, productivity loss, and operational disruption.
+However, HR teams often lack a structured way to identify which employees are at higher risk of leaving and which factors are realistically actionable.
 
-This project analyzes historical HR data to answer two key questions:
-- Who is most likely to leave the organization?
-- Why are they leaving?
+This project uses historical HR data to address two decision-focused questions:
+
+Which employees are most at risk of attrition?
+
+What controllable factors are contributing to their decision to leave?
+
+The objective is not just prediction, but risk ranking and insight generation to support HR decision-making.
 
 ---
 
@@ -74,6 +78,14 @@ These dashboards allow HR stakeholders to explore trends without interacting dir
 - Lower job satisfaction and lower income levels are strongly associated with attrition
 - Attrition varies across departments, job roles, and tenure groups
 - Random Forest achieved better predictive performance, while Logistic Regression offered clearer interpretability
+
+---
+
+## How This Can Be Used by HR
+
+- Identify high-risk employees for early intervention
+- Focus retention strategies on controllable factors (e.g., overtime, role design)
+- Avoid over-reliance on non-actionable attributes such as age
 
 ---
 
